@@ -69,3 +69,77 @@ myAge
 
 ++myAge
 
+myAge *= 2
+
+myAge = 40
+
+// Google C Maths Functions and Constants - M_...
+
+sqrt(100.0)
+
+M_PI
+
+abs(-989)
+
+// Concatination
+
+myName + " Likes pies"
+
+var dailyIntake = 6
+
+var monthlyPies = 6 * 7 * 4.5
+
+// Escape characters
+
+"I get \"paid\" for this!"
+
+"Do this tomorrow:\n\tThis first\n\tThis second"
+
+"Today, \(myName) consumed \(dailyIntake) pies!"
+
+// Conditional Operators
+
+//  Equality        ==
+//  Inequality      !=
+//  Less than       <
+//  Greater than    >
+//  LT or Equals    <=
+//  GT or Equals    >=
+
+//  NOT             !
+
+//  Total Equality    ===
+//  Total Inequality  !==
+
+//  Conditional Conjunctives
+
+//  Conditional AND     &&
+//  Conditional OR      ||
+
+100 == 100
+
+90 == 42
+
+90 != 42
+
+90 < 42
+
+90 > 42
+
+90 > 90
+
+90 >= 90
+
+10 == 10.0
+
+10 === 10.0
+
+var points = 10
+
+var success = points > 30
+
+!success
+
+points > 60 && points < 80
+
+points > 60 || points == 30
