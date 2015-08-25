@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>92137EAB-D397-4E28-AF2B-12F692469F70</string>
+	<string>EDF171A5-82C9-4A4B-8ACC-4791C6A45195</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Hello World</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5C0C8302DD10BB07FBB42989FC0749368C114455</key>
 		<string>https://github.com/GLBaird/iosDevACAugust2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Hello World/Hello World.xcodeproj</string>
+	<string>ToDoList/ToDoList.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5C0C8302DD10BB07FBB42989FC0749368C114455</key>
