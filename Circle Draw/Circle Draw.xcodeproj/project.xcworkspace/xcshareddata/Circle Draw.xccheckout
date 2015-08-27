@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>50E6E01A-F703-4BAB-B6BC-CBFE250E2AB0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Circle Draw</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5C0C8302DD10BB07FBB42989FC0749368C114455</key>
 		<string>https://github.com/GLBaird/iosDevACAugust2015.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Circle Draw/Circle Draw.xcodeproj/project.xcworkspace</string>
+	<string>Circle Draw/Circle Draw.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5C0C8302DD10BB07FBB42989FC0749368C114455</key>

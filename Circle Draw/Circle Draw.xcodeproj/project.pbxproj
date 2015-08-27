@@ -15,6 +15,7 @@
 		35446BFE1B8E0294002B7B35 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446BFD1B8E0294002B7B35 /* RootViewController.swift */; };
 		35446C001B8E02C6002B7B35 /* ColorMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446BFF1B8E02C6002B7B35 /* ColorMixerViewController.swift */; };
 		35446C021B8E0344002B7B35 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35446C011B8E0344002B7B35 /* CircleView.swift */; };
+		35F84AA81B8F567400FDF1D8 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 35F84AA71B8F567400FDF1D8 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		35446BFD1B8E0294002B7B35 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		35446BFF1B8E02C6002B7B35 /* ColorMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMixerViewController.swift; sourceTree = "<group>"; };
 		35446C011B8E0344002B7B35 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		35F84AA71B8F567400FDF1D8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				35446BDB1B8DDC80002B7B35 /* AppDelegate.swift */,
+				35F84AA71B8F567400FDF1D8 /* Settings.bundle */,
 				35446BDF1B8DDC80002B7B35 /* Main.storyboard */,
 				35446BFC1B8E014B002B7B35 /* View Controllers */,
 				35446BFB1B8E0135002B7B35 /* Views */,
@@ -214,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F84AA81B8F567400FDF1D8 /* Settings.bundle in Resources */,
 				35446BE11B8DDC80002B7B35 /* Main.storyboard in Resources */,
 				35446BE61B8DDC80002B7B35 /* LaunchScreen.xib in Resources */,
 				35446BE31B8DDC80002B7B35 /* Images.xcassets in Resources */,
@@ -435,6 +439,7 @@
 				35446BF71B8DDC80002B7B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35446BF81B8DDC80002B7B35 /* Build configuration list for PBXNativeTarget "Circle DrawTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +448,7 @@
 				35446BFA1B8DDC80002B7B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

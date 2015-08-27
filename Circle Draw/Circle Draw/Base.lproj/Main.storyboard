@@ -34,9 +34,10 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fz1-E6-BY2" customClass="CircleView" customModule="Circle_Draw" customModuleProvider="target">
+                            <view multipleTouchEnabled="YES" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fz1-E6-BY2" customClass="CircleView" customModule="Circle_Draw" customModuleProvider="target">
                                 <rect key="frame" x="16" y="87" width="568" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,6 +51,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZtS-Uy-3iS" secondAttribute="trailing" constant="-20" id="pta-sy-s3a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleView" destination="fz1-E6-BY2" id="pWz-SV-TMy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -73,7 +77,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Options" id="n4A-nH-bbf">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="S9X-0x-2Pg"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="S9X-0x-2Pg">
+                                            <connections>
+                                                <segue destination="PWU-UA-FeF" kind="unwind" unwindAction="closeColorMixer:" id="ErE-Bz-Hmn"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -87,16 +95,25 @@
                                 <rect key="frame" x="14" y="115" width="572" height="31"/>
                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderChangedValue:" destination="L5K-jd-un4" eventType="valueChanged" id="G8H-fX-xl3"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="E77-md-8fm">
                                 <rect key="frame" x="14" y="153" width="572" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderChangedValue:" destination="L5K-jd-un4" eventType="valueChanged" id="5Ls-B4-2Yl"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="j3l-cE-4dX">
                                 <rect key="frame" x="14" y="191" width="572" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="thumbTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderChangedValue:" destination="L5K-jd-un4" eventType="valueChanged" id="dUP-PW-6fk"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color preview:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-FH-pTJ">
                                 <rect key="frame" x="16" y="229" width="111" height="21"/>
@@ -148,10 +165,17 @@
                         </variation>
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="300" height="250"/>
+                    <connections>
+                        <outlet property="colorPreview" destination="0Fe-Vm-7p6" id="RVa-qB-GJQ"/>
+                        <outlet property="sliderBlue" destination="j3l-cE-4dX" id="aqt-mb-UZ6"/>
+                        <outlet property="sliderGreen" destination="E77-md-8fm" id="qKP-SY-fYf"/>
+                        <outlet property="sliderRed" destination="ZAX-hn-1uR" id="zmh-9X-vL6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARu-uS-KVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PWU-UA-FeF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1143" y="449"/>
+            <point key="canvasLocation" x="1606" y="434"/>
         </scene>
     </scenes>
 </document>
