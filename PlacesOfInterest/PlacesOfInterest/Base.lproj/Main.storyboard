@@ -76,6 +76,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qaM-zL-t7W" kind="push" id="tfX-xe-tuY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -93,10 +96,132 @@
             </objects>
             <point key="canvasLocation" x="436" y="516"/>
         </scene>
+        <!--View places-->
+        <scene sceneID="CFk-1F-fAr">
+            <objects>
+                <tableViewController id="qaM-zL-t7W" customClass="ListTableViewController" customModule="PlacesOfInterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gfp-E1-FRq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" verticalHuggingPriority="1000" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="65" id="ICp-hY-JRn" customClass="PlaceTableViewCell" customModule="PlacesOfInterest" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ICp-hY-JRn" id="gwJ-Ki-GKO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZL-S7-i1r">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="64"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="ozK-Tu-AFE"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of place" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-U2-l3U">
+                                            <rect key="frame" x="88" y="11" width="191" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st September 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dce-iB-4Sx">
+                                            <rect key="frame" x="88" y="31" width="191" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="GZL-S7-i1r" secondAttribute="bottom" constant="-8" id="41j-oy-1Qo"/>
+                                        <constraint firstItem="ql8-U2-l3U" firstAttribute="leading" secondItem="GZL-S7-i1r" secondAttribute="trailing" constant="8" id="9YW-LH-5cU"/>
+                                        <constraint firstItem="dce-iB-4Sx" firstAttribute="centerY" secondItem="GZL-S7-i1r" secondAttribute="centerY" constant="9.5" id="I5W-O4-VY5"/>
+                                        <constraint firstItem="ql8-U2-l3U" firstAttribute="trailing" secondItem="gwJ-Ki-GKO" secondAttribute="trailingMargin" id="OP3-4E-WHe"/>
+                                        <constraint firstItem="GZL-S7-i1r" firstAttribute="top" secondItem="gwJ-Ki-GKO" secondAttribute="topMargin" constant="-8" id="Rs8-mX-fqk"/>
+                                        <constraint firstItem="GZL-S7-i1r" firstAttribute="leading" secondItem="gwJ-Ki-GKO" secondAttribute="leadingMargin" constant="-8" id="UGx-PK-Rk2"/>
+                                        <constraint firstItem="dce-iB-4Sx" firstAttribute="trailing" secondItem="gwJ-Ki-GKO" secondAttribute="trailingMargin" id="nSF-me-A3L"/>
+                                        <constraint firstItem="ql8-U2-l3U" firstAttribute="centerY" secondItem="GZL-S7-i1r" secondAttribute="centerY" constant="-10.5" id="sgB-yk-7Bc"/>
+                                        <constraint firstItem="dce-iB-4Sx" firstAttribute="leading" secondItem="GZL-S7-i1r" secondAttribute="trailing" constant="8" id="vKX-ZY-fYq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="dce-iB-4Sx" id="6HB-ca-TV2"/>
+                                    <outlet property="imagePreview" destination="GZL-S7-i1r" id="r56-2f-Axd"/>
+                                    <outlet property="nameLabel" destination="ql8-U2-l3U" id="oLK-TT-hyP"/>
+                                    <segue destination="dwH-6Q-the" kind="push" id="q2T-dy-gwf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qaM-zL-t7W" id="hI7-Pa-3PT"/>
+                            <outlet property="delegate" destination="qaM-zL-t7W" id="m7U-cM-tOg"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="View places" id="3DJ-6W-h1f">
+                        <barButtonItem key="backBarButtonItem" title="Places" id="Ter-bl-nBi"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sk-6l-cRS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979" y="418"/>
+        </scene>
+        <!--Place Name-->
+        <scene sceneID="i5R-md-oF4">
+            <objects>
+                <viewController id="dwH-6Q-the" customClass="MapViewController" customModule="PlacesOfInterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="74S-Zd-Ctj"/>
+                        <viewControllerLayoutGuide type="bottom" id="2XN-ZY-kVk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VH3-BZ-Ydm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5OP-TR-LQm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5OP-TR-LQm" secondAttribute="bottom" id="5LS-Ez-l5v"/>
+                            <constraint firstItem="5OP-TR-LQm" firstAttribute="top" secondItem="VH3-BZ-Ydm" secondAttribute="top" id="OXu-LH-3Nk"/>
+                            <constraint firstAttribute="trailing" secondItem="5OP-TR-LQm" secondAttribute="trailing" id="dSu-mS-2jl"/>
+                            <constraint firstItem="5OP-TR-LQm" firstAttribute="leading" secondItem="VH3-BZ-Ydm" secondAttribute="leading" id="mCR-jm-2Cj"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="Facebook" id="MEt-m7-GRz">
+                            <connections>
+                                <action selector="postToFacebook:" destination="dwH-6Q-the" id="S9z-G1-mo6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="4FT-zP-SkP"/>
+                        <barButtonItem title="Standard" id="OMe-bB-en3">
+                            <connections>
+                                <action selector="switchMapMode:" destination="dwH-6Q-the" id="BvI-s7-5mC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem tag="1" title="Satellite" id="l1z-t7-W5Q">
+                            <connections>
+                                <action selector="switchMapMode:" destination="dwH-6Q-the" id="p2V-l7-uGu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem tag="2" title="Hybrid" id="VeE-4L-OvP">
+                            <connections>
+                                <action selector="switchMapMode:" destination="dwH-6Q-the" id="9RF-Xl-DfB"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Place Name" id="ssQ-QN-Fvj"/>
+                    <connections>
+                        <outlet property="map" destination="5OP-TR-LQm" id="Xqa-6O-nin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaD-wX-vyQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="418"/>
+        </scene>
         <!--Add place-->
         <scene sceneID="EXK-Zs-XOj">
             <objects>
-                <viewController id="1x2-xV-yhm" sceneMemberID="viewController">
+                <viewController id="1x2-xV-yhm" customClass="AddViewController" customModule="PlacesOfInterest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N0M-OW-Zyf"/>
                         <viewControllerLayoutGuide type="bottom" id="u0J-PE-on5"/>
@@ -111,7 +236,10 @@
                                     <constraint firstAttribute="height" constant="30" id="OIC-0Q-B8w"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1x2-xV-yhm" id="wGk-Ky-cAb"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview of image:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hn-qE-8j8">
                                 <rect key="frame" x="16" y="128" width="137" height="21"/>
@@ -141,15 +269,32 @@
                         </constraints>
                     </view>
                     <toolbarItems>
+                        <barButtonItem image="Camera" id="1L5-DF-Vd0">
+                            <connections>
+                                <action selector="pickImageSource:" destination="1x2-xV-yhm" id="mvD-Qb-KQZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="1zt-3f-hgk"/>
-                        <barButtonItem title="Clear" id="zbl-cL-UPe"/>
-                        <barButtonItem title="Save" id="pqM-5s-vf9"/>
+                        <barButtonItem title="Clear" id="zbl-cL-UPe">
+                            <connections>
+                                <action selector="clearForm:" destination="1x2-xV-yhm" id="hSD-DD-Yjs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Save" id="pqM-5s-vf9">
+                            <connections>
+                                <action selector="savePlace:" destination="1x2-xV-yhm" id="FGS-T5-bjL"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Add place" id="eOH-at-tEN"/>
+                    <connections>
+                        <outlet property="imagePreview" destination="SBc-cf-6X5" id="YoZ-F0-0nk"/>
+                        <outlet property="nameTextField" destination="hcN-bV-aaB" id="oYa-UC-8Lz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfZ-Oe-7xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901" y="516"/>
+            <point key="canvasLocation" x="979" y="1062"/>
         </scene>
         <!--About-->
         <scene sceneID="cHK-ox-6Ki">
@@ -203,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3R-FX-yj5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913" y="1347"/>
+            <point key="canvasLocation" x="979" y="-285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RJD-KY-n8v">
@@ -228,6 +373,7 @@
     <resources>
         <image name="About" width="32" height="32"/>
         <image name="Camera" width="32" height="32"/>
+        <image name="Facebook" width="32" height="32"/>
         <image name="List" width="32" height="32"/>
         <image name="Places Of Interest Icon" width="500" height="500"/>
         <image name="Plus" width="32" height="32"/>

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35A0441C1B9072A2002E506F /* PlacesOfInterest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35A0441A1B9072A2002E506F /* PlacesOfInterest.xcdatamodeld */; };
+		35A044211B907843002E506F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A044201B907843002E506F /* Place.swift */; };
+		35A044231B90910D002E506F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A044221B90910D002E506F /* AddViewController.swift */; };
+		35A044251B909129002E506F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A044241B909129002E506F /* MapViewController.swift */; };
+		35A044271B90914C002E506F /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A044261B90914C002E506F /* ListTableViewController.swift */; };
+		35A044291B9092A5002E506F /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A044281B9092A5002E506F /* PlaceTableViewCell.swift */; };
 		35F84AB81B8F605F00FDF1D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F84AB71B8F605F00FDF1D8 /* AppDelegate.swift */; };
-		35F84ABB1B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35F84AB91B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodeld */; };
-		35F84ABD1B8F605F00FDF1D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F84ABC1B8F605F00FDF1D8 /* ViewController.swift */; };
 		35F84AC01B8F605F00FDF1D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35F84ABE1B8F605F00FDF1D8 /* Main.storyboard */; };
 		35F84AD11B8F605F00FDF1D8 /* PlacesOfInterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F84AD01B8F605F00FDF1D8 /* PlacesOfInterestTests.swift */; };
 		35F84ADB1B8F627B00FDF1D8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35F84ADA1B8F627B00FDF1D8 /* Media.xcassets */; };
@@ -26,11 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35A0441B1B9072A2002E506F /* PlacesOfInterest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlacesOfInterest.xcdatamodel; sourceTree = "<group>"; };
+		35A044201B907843002E506F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		35A044221B90910D002E506F /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		35A044241B909129002E506F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		35A044261B90914C002E506F /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		35A044281B9092A5002E506F /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		35F84AB21B8F605F00FDF1D8 /* PlacesOfInterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesOfInterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F84AB61B8F605F00FDF1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35F84AB71B8F605F00FDF1D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35F84ABA1B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlacesOfInterest.xcdatamodel; sourceTree = "<group>"; };
-		35F84ABC1B8F605F00FDF1D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35F84ABF1B8F605F00FDF1D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35F84ACA1B8F605F00FDF1D8 /* PlacesOfInterestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesOfInterestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35F84ACF1B8F605F00FDF1D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +64,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35A0441D1B907667002E506F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35A044201B907843002E506F /* Place.swift */,
+				35A0441A1B9072A2002E506F /* PlacesOfInterest.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		35A0441E1B907674002E506F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35A044281B9092A5002E506F /* PlaceTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		35A0441F1B90767D002E506F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				35A044221B90910D002E506F /* AddViewController.swift */,
+				35A044241B909129002E506F /* MapViewController.swift */,
+				35A044261B90914C002E506F /* ListTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		35F84AA91B8F605E00FDF1D8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				35F84AB71B8F605F00FDF1D8 /* AppDelegate.swift */,
-				35F84ABC1B8F605F00FDF1D8 /* ViewController.swift */,
 				35F84ABE1B8F605F00FDF1D8 /* Main.storyboard */,
 				35F84ADA1B8F627B00FDF1D8 /* Media.xcassets */,
-				35F84AB91B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodeld */,
+				35A0441F1B90767D002E506F /* View Controllers */,
+				35A0441E1B907674002E506F /* Views */,
+				35A0441D1B907667002E506F /* Models */,
 				35F84AB51B8F605F00FDF1D8 /* Supporting Files */,
 			);
 			path = PlacesOfInterest;
@@ -211,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35F84ABD1B8F605F00FDF1D8 /* ViewController.swift in Sources */,
-				35F84ABB1B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodeld in Sources */,
+				35A044211B907843002E506F /* Place.swift in Sources */,
+				35A0441C1B9072A2002E506F /* PlacesOfInterest.xcdatamodeld in Sources */,
+				35A044231B90910D002E506F /* AddViewController.swift in Sources */,
+				35A044291B9092A5002E506F /* PlaceTableViewCell.swift in Sources */,
+				35A044271B90914C002E506F /* ListTableViewController.swift in Sources */,
+				35A044251B909129002E506F /* MapViewController.swift in Sources */,
 				35F84AB81B8F605F00FDF1D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +443,7 @@
 				35F84AD61B8F605F00FDF1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35F84AD71B8F605F00FDF1D8 /* Build configuration list for PBXNativeTarget "PlacesOfInterestTests" */ = {
 			isa = XCConfigurationList;
@@ -411,16 +452,17 @@
 				35F84AD91B8F605F00FDF1D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		35F84AB91B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodeld */ = {
+		35A0441A1B9072A2002E506F /* PlacesOfInterest.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				35F84ABA1B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodel */,
+				35A0441B1B9072A2002E506F /* PlacesOfInterest.xcdatamodel */,
 			);
-			currentVersion = 35F84ABA1B8F605F00FDF1D8 /* PlacesOfInterest.xcdatamodel */;
+			currentVersion = 35A0441B1B9072A2002E506F /* PlacesOfInterest.xcdatamodel */;
 			path = PlacesOfInterest.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
